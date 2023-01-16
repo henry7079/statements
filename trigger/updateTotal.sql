@@ -6,3 +6,4 @@ AS
     DECLARE @total DECIMAL(16, 2) = (SELECT SUM(Quantity * Amount) FROM Order_line WHERE id = @saleOrderId);
 
     UPDATE Sale_order SET Total = @total WHERE id = @saleOrderId;
+	PRINT('Hello world');
